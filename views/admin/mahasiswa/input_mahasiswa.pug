@@ -1,0 +1,73 @@
+include  ../../admin/index
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Mahasiswa
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input Data Mahasiswa
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="post", action="/inputmahasiswa", role='form')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kodemahasiswa') NPM
+                                        .col-sm-10
+                                            input#kodemahasiswa.form-control(type='text' name="kodemahasiswa" placeholder='NPM')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='namamahasiswa') Nama Mahasiswa
+                                        .col-sm-10
+                                            input#namamahasiswa.form-control(type='text' name="namamahasiswa" placeholder='Nama Mahasiswa')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='ttl') ttl
+                                        .col-sm-10
+                                            input#ttl.form-control(type='text' name="ttl" placeholder='ttl')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='jeniskelamin') Jenis Kelamin
+                                        .col-sm-10
+                                            input#jeniskelamin.form-control(type='text' name="jeniskelamin" placeholder='jeniskelamin')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='telephone') telephone
+                                        .col-sm-10
+                                            input#telephone.form-control(type='text' name="telephone" placeholder='Telephone')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='email') email
+                                        .col-sm-10
+                                            input#email.form-control(type='text' name="email" placeholder='Email')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='agama') agama
+                                        .col-sm-10
+                                            input#agama.form-control(type='text' name="agama" placeholder='Agama')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='alamat') Alamat
+                                        .col-sm-10
+                                            input#alamat.form-control(type='text' name="alamat" placeholder='Alamat')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='tahunmasuk') Tahun Masuk
+                                        .col-sm-10
+                                            input#tahunmasuk.form-control(type='text' name="tahunmasuk" placeholder='Tahun Masuk')
+
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer

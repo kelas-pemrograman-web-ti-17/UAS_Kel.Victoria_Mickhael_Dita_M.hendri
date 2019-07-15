@@ -1,0 +1,53 @@
+include  ../../admin/index
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Kalender AKademik
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input Data Kalender Akademik
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="post", action="/inputtglakademik", role='form')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='tanggal') Tanggal
+                                        .col-sm-10
+                                            input#tanggal.form-control(type='text' name="tanggal" placeholder='tanggal')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='bulan') Bulan
+                                        .col-sm-10
+                                            input#bulan.form-control(type='text' name="bulan" placeholder='Bulan')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='tahun') Tahun
+                                        .col-sm-10
+                                            input#tahun.form-control(type='text' name="tahun" placeholder='Tahun')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='keterangan') Keterangan
+                                        .col-sm-10
+                                            input#keterangan.form-control(type='text' name="keterangan" placeholder='Keterangan')
+
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer

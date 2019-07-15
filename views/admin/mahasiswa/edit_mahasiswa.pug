@@ -1,0 +1,72 @@
+include  ../../admin/index
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Mahasiswa
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input data Mahasiswa
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="POST", action='/'+mahasiswaa._id + '/editmahasiswa')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kodemahasiswa') Kode Mahasiswa
+                                        .col-sm-10
+                                            input#kodemahasiswa.form-control(type='text' name="kodemahasiswa" placeholder='Kode Mahasiswa' value= (kodemahasiswa == undefined) ? mahasiswaa.kodemahasiswa: kodemahasiswa)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='namamahasiswa') Nama Mahasiswa
+                                        .col-sm-10
+                                            input#namamahasiswa.form-control(type='text' name="namamahasiswa" placeholder='Nama Mahasiswa' value= (namamahasiswa == undefined) ? mahasiswaa.namamahasiswa: namamahasiswa)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='ttl') TTL
+                                        .col-sm-10
+                                            input#ttl.form-control(type='text' name="ttl" placeholder='TTL' value= (ttl == undefined) ? mahasiswaa.ttl : ttl)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='jeniskelamin') Jenis Kelamin
+                                        .col-sm-10
+                                            input#jeniskelamin.form-control(type='text' name="jeniskelamin" placeholder=' jeniskelamin' value= (jeniskelamin == undefined) ? mahasiswaa.jeniskelamin : jeniskelamin)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='telephone') Telephone
+                                        .col-sm-10
+                                            input#telephone.form-control(type='text' name="telephone" placeholder='telephone' value= (telephone == undefined) ? mahasiswaa.telephone: telephone)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='email') Email
+                                        .col-sm-10
+                                            input#email.form-control(type='text' name="email" placeholder='email' value= (email == undefined) ? mahasiswaa.email: email)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='agama') Agama
+                                        .col-sm-10
+                                            input#agama.form-control(type='text' name="agama" placeholder='agama' value= (agama == undefined) ? mahasiswaa.agama: agama)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='alamat') Alamat
+                                        .col-sm-10
+                                            input#alamat.form-control(type='text' name="alamat" placeholder='alamat' value= (alamat == undefined) ? mahasiswaa.alamat : alamat)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='tahunmasuk') Matkul
+                                        .col-sm-10
+                                            input#tahunmasuk.form-control(type='text' name="tahunmasuk" placeholder=' tahun masuk' value= (tahunmasuk == undefined) ? mahasiswaa .tahunmasuk : tahunmasuk)
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer

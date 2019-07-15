@@ -1,0 +1,65 @@
+include  ../../admin/index
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Dosen
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input Data Dosen
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="post", action="/inputdosen", role='form')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kodedosen') NID
+                                        .col-sm-10
+                                            input#kodedosen.form-control(type='text' name="kodedosen" placeholder='NID')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='namadosen') Nama Dosen
+                                        .col-sm-10
+                                            input#namadosen.form-control(type='text' name="namadosen" placeholder='Nama Dosen')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='telephone') telephone
+                                        .col-sm-10
+                                            input#telephone.form-control(type='text' name="telephone" placeholder='Telephone')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='email') email
+                                        .col-sm-10
+                                            input#email.form-control(type='text' name="email" placeholder='Email')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='agama') agama
+                                        .col-sm-10
+                                            input#agama.form-control(type='text' name="agama" placeholder='Agama')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='pendidikan') Pendidikan
+                                        .col-sm-10
+                                            input#pendidikan.form-control(type='text' name="pendidikan" placeholder='Pendidikan')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='matkul') Matkul
+                                        .col-sm-10
+                                            input#matkul.form-control(type='text' name="matkul" placeholder='Matkul')
+
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer

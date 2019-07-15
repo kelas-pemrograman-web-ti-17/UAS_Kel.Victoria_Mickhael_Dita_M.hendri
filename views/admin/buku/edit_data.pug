@@ -1,0 +1,76 @@
+include  ../../admin/index
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Nilai Mahasiswa
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input data Nilai Mahasiswa
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="POST", action='/'+nilais._id + '/editbuku')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kodebuku') User Name
+                                        .col-sm-10
+                                            input#kodebuku.form-control(type='text' name="kodebuku" placeholder='User Name' value= (kodebuku == undefined) ? nilais.kodebuku: kodebuku)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='judul') NPM
+                                        .col-sm-10
+                                            input#judul.form-control(type='text' name="judulbuku" placeholder='NPM' value= (judulbuku == undefined) ? nilais.judulbuku: judulbuku)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='sinopsis') Fakultas
+                                        .col-sm-10
+                                            input#sinopsis.form-control(type='text' name="sinopsis" placeholder='Fakultas' value= (sinopsis == undefined) ? nilais.sinopsis: sinopsis)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='pengarang') Program study
+                                        .col-sm-10
+                                            input#pengarang.form-control(type='text' name="pengarang" placeholder='Prodi' value= (pengarang == undefined) ? nilais.pengarang: pengarang)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='harga') Nilai Pemograman Web
+                                        .col-sm-10
+                                            input#harga.form-control(type='text' name="harga" placeholder='Nilai Permograman Web' value= (harga == undefined) ? nilais.harga: harga)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='nilaiooad') Nilai OOAD
+                                        .col-sm-10
+                                            input#nilaiooad.form-control(type='text' name="nilaiooad" placeholder=' Nilai OOAD' value= (nilaiooad == undefined) ? nilais.kodebuku : nilaiooad)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='nilairpl') Nilai RPL
+                                        .col-sm-10
+                                            input#nilairpl.form-control(type='text' name="nilairpl" placeholder='Nilai RPL' value= (nilairpl == undefined) ? nilais.judulbuku : nilairpl)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='nilaicitra') Nilai PCD
+                                        .col-sm-10
+                                            input#nilaicitra.form-control(type='text' name="nilaicitra" placeholder='Nilai PCD' value= (nilaicitra == undefined) ? nilais.sinopsis : nilaicitra)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='nilaikomdat') Nilai komdat
+                                        .col-sm-10
+                                            input#nilaikomdat.form-control(type='text' name="nilaikomdat" placeholder='Nilai Komdat' value= (nilaikomdat == undefined) ?nilais.pengarang : nilaikomdat)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='nilaiso') Nilai SO
+                                        .col-sm-10
+                                            input#nilaiso.form-control(type='text' name="nilaiso" placeholder='Nilai SO' value= (nilaiso == undefined) ? nilais.harga : nilaiso)
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer

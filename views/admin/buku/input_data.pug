@@ -1,0 +1,77 @@
+include  ../../admin/index
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Nilai Mahasiswa
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input Data Nilai Mahasiswa
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="post", action="/inputbuku", role='form')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kodebuku') user name
+                                        .col-sm-10
+                                            input#kodebuku.form-control(type='text' name="kodebuku" placeholder='user name')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='judul') NPM
+                                        .col-sm-10
+                                            input#judul.form-control(type='text' name="judulbuku" placeholder='NPM')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='sinopsis') Fakultas
+                                        .col-sm-10
+                                            input#sinopsis.form-control(type='text' name="sinopsis" placeholder='Fakultas')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='pengarang') Program Study
+                                        .col-sm-10
+                                            input#pengarang.form-control(type='text' name="pengarang" placeholder='Prodi')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='harga') Nilai Pemograman Web
+                                        .col-sm-10
+                                            input#harga.form-control(type='text' name="harga" placeholder='Nilai Pemograman Web')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='nilaiooad') Nilai OOAD
+                                        .col-sm-10
+                                            input#nilaiooad.form-control(type='text' name="nilaiooad" placeholder='Nilai OOAD')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='nilairpl') Nilai RPL
+                                        .col-sm-10
+                                            input#nilairpl.form-control(type='text' name="nilairpl" placeholder='Nilai RPL')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='nilaicitra') Nilai PCD
+                                        .col-sm-10
+                                            input#nilaicitra.form-control(type='text' name="nilaicitra" placeholder='Nilai PCD ')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='nilaikomdat') Nilai KomDat
+                                        .col-sm-10
+                                            input#nilaikomdat.form-control(type='text' name="nilaikomdat" placeholder=' Nilai KomDat')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='nilaiso') Nilai SO
+                                        .col-sm-10
+                                            input#nilaiso.form-control(type='text' name="nilaiso" placeholder='Nilai SO')
+
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer
